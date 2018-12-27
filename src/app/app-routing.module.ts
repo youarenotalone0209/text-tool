@@ -5,7 +5,7 @@ import { TextToolComponent } from './text-tool/text-tool.component';
 const routes: Routes = [{
 	path: '',
 	component: TextToolComponent
-};
+}];
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes)],

@@ -1,6 +1,19 @@
 # UtilitiesApp
 
+A simple Text Tool web application:
+
+* Lowercase text 
+* Uppercase text
+* Shuffle text
+* Convert long integer number to hexadecimal
+* Generate random text 
+
+Developer: Ky Tran
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+
+## To run this app
+Clone the repo and run npm install
 
 ## Development server
 

@@ -15,24 +15,42 @@ export class TextToolComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	resetText(firstTextArea, secondTextArea) {
+	errorMessage(text) {
+		if (!text) {
+			this.resultMessage = 'Please type in your text';
+			this.showResult = true;
+			return true;
+		}
+	}
+
+	resetText(firstTextArea) {
 		firstTextArea.value = '';
 		this.showResult = false;
 		this.showExtraField = false;
 	}
 
 	lowerCase(text) {
+		if (this.errorMessage(text)) {
+			return;
+		}
+		
 		this.resultMessage = text.toLowerCase();
 		this.showResult = true;
 	}
 
 	upperCase(text) {
+		if (this.errorMessage(text)) {
+			return;
+		}
 		this.resultMessage = text.toUpperCase();
 		this.showResult = true;
 	}
 
 	shuffle(text) {
 		var currentIndex = text.length, temporaryValue, randomIndex;
+		if (this.errorMessage(text)) {
+			return;
+		}
 		text = text.split('');
 		// While there remain elements to shuffle...
 		while (0 !== currentIndex) {
@@ -58,8 +76,13 @@ export class TextToolComponent implements OnInit {
 			i,
 			s;
 
+		if (this.errorMessage(text)) {
+			return;
+		}
 		if (!text.match(/^[0-9]*$/)) {
 			this.resultMessage = 'Please type in number only';
+			this.showResult = true;
+			return;
 		} else {
 			dec = text.split('');
 			while (dec.length) {
@@ -79,13 +102,11 @@ export class TextToolComponent implements OnInit {
 	}
 
 	random(text) {
-		if (!text) {
-			this.resultMessage = 'Please type in how many letters you want to generate for this random text';
-			this.showResult = true;
+		if (this.errorMessage(text)) {
 			return;
 		}
 		if (!text.match(/^[0-9]*$/)) {
-			this.resultMessage = 'Please type in number only';
+			this.resultMessage = 'Please type the number of letters you would like to generate';
 			this.showResult = true;
 			return;
 		}
