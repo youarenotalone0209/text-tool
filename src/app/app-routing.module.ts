@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConversionComponent } from './conversion/conversion.component';
-import { TextCompareComponent } from './text-compare/text-compare.component';
+import { TextToolComponent } from './text-tool/text-tool.component';
 
 const routes: Routes = [{
-	path: 'conversion',
-	component: ConversionComponent
-}, {
-	path: 'text-compare',
-	component: TextCompareComponent
-}];
+	path: '',
+	component: TextToolComponent
+};
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,32 @@
+
+<div class="example-container">
+	<h4 class="title">Text Tool</h4>
+	<mat-form-field>
+		<textarea matInput placeholder="Please enter your text here" #firstText></textarea>
+	</mat-form-field>
+
+	<div *ngIf="showResult" class="result">
+		<h5>{{resultMessage}}</h5>
+	</div>
+	
+	<div class="button">
+		<button mat-button class="button" mat-raised-button (click)='resetText(firstText)'>
+			Reset
+		</button>
+		<button mat-button class="button" mat-raised-button color="primary" (click)='lowerCase(firstText.value)'>
+			Lowercase
+		</button>
+		<button mat-button class="button" mat-raised-button color="primary" (click)='upperCase(firstText.value)'>
+			UpperCase
+		</button>
+		<button mat-button class="button" mat-raised-button color="primary" (click)='shuffle(firstText.value)'>
+			Shuffle
+		</button>
+		<button mat-button class="button" mat-raised-button color="accent" (click)='random(firstText.value)'>
+			Generate Random Text
+		</button>
+		<button mat-button class="button" mat-raised-button color="accent" (click)='toHex(firstText.value)'>
+			Number to Hex Conversion
+		</button>
+	</div>
+</div>

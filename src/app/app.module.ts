@@ -5,14 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoMaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ConversionComponent } from './conversion/conversion.component';
-import { TextCompareComponent } from './text-compare/text-compare.component';
+import { TextToolComponent } from './text-tool/text-tool.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		ConversionComponent,
-		TextCompareComponent
+		TextToolComponent
 	],
 	imports: [
 		AppRoutingModule,

@@ -1,7 +1,7 @@
 <mat-toolbar class="nav-bar">
 	<button mat-button [matMenuTriggerFor]="menu">Menu</button>
 	<mat-menu #menu="matMenu">
-		<button mat-menu-item *ngFor="let item of menuItems" (click)="routeToPage(item.path)">{{item.name}}</button>
+		<button mat-menu-item *ngFor="let item of menuItems">{{item.name}}</button>
 	</mat-menu>
 </mat-toolbar>
 <router-outlet></router-outlet>

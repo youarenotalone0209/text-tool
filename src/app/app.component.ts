@@ -9,11 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
 	constructor(private router: Router) { }
 	menuItems = [{
-		name: 'Conversion',
-		path: '/conversion'
-	}, {
-		name: 'Text Compare',
-		path: '/text-compare'
+		name: 'Developer: Ky Tran'
 	}];
 
 	routeToPage(path) {
